@@ -1,0 +1,131 @@
+$colore-principale: #7a3e48;
+
+body {
+  font-family: Georgia, serif;
+  background: #faf6f2;
+}
+
+h1 {
+  color: $colore-principale;
+}
+.hero {
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+
+// Flexbox: foto e testo affiancati su schermi larghi, uno sopra l'altro su telefono
+.presentazione {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+    gap: 3rem;
+  }
+}
+
+.foto-profilo {
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0; // impedisce alla foto di restringersi
+  object-fit: cover; // ritaglia senza deformare
+  border-radius: 50%;
+}
+
+.ruolo {
+  color: $colore-principale;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.link-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  a {
+    color: $colore-principale;
+    border-bottom: 1px solid $colore-principale;
+    text-decoration: none;
+  }
+}
+.cv {
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+
+// CSS Grid: una colonna su telefono, due colonne da tablet in su
+.cv-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+.cv-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+
+  h2 {
+    color: $colore-principale;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.1rem;
+  }
+}
+
+.cv-meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.contatti {
+  padding-top: 110px;
+  padding-bottom: 60px;
+  max-width: 600px;
+}
+
+.form-contatti {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+.btn-invia {
+  background: $colore-principale;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+
+  &:hover {
+    background: #5f2f37;
+  }
+}.foto-cv {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+}
