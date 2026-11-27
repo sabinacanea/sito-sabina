@@ -96,7 +96,7 @@ h1 {
 .cv-meta {
   color: #777;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
 .contatti {
   padding-top: 110px;
@@ -121,11 +121,24 @@ h1 {
   &:hover {
     background: #5f2f37;
   }
-}.foto-cv {
+
+}
+.foto-cv {
   display: block;
   width: 160px;
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto 1.5rem;
+}
+.cv-desc {
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.cv-box a {
+  color: $colore-principale;
+}
+.cv h1 {
+  margin-bottom: 1.5rem;
 }
